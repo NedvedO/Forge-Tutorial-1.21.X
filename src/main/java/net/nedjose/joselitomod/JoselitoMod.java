@@ -1,6 +1,7 @@
 package net.nedjose.joselitomod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nedjose.joselitomod.item.ModItems;
 import org.slf4j.Logger;
 
 // very important comment
@@ -32,6 +34,11 @@ public class JoselitoMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Call ModItems.register(modEventBus); inside JoselitoMod main class constructor.
+        // This hooks your item list into Forge’s system.
+        // Now Forge knows about list created in ModItems.java class and item is registered in mod
+        ModItems.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -44,7 +51,13 @@ public class JoselitoMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        // This adds our custom item 'attendancesheet' to our ingredients tab
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ATTENDANCESHEET);
+            event.accept(ModItems.KAHOOT_TOKEN);
+            event.accept(ModItems.KAHOOT_GOLD_MEDAL);
+            event.accept(ModItems.PROFESSORS_PEN);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
