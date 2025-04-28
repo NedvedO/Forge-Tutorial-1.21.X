@@ -14,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nedjose.joselitomod.block.ModBlocks;
 import net.nedjose.joselitomod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -34,10 +35,11 @@ public class JoselitoMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Call ModItems.register(modEventBus); inside JoselitoMod main class constructor.
-        // This hooks your item list into Forge’s system.
-        // Now Forge knows about list created in ModItems.java class and item is registered in mod
+        // Call ModItems._____(modEventBus); inside JoselitoMod main class constructor.
+        // This hooks your _____ list into Forge’s system.
+        // Now Forge knows about list created in _______.java class and item is registered in mod
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,12 +53,17 @@ public class JoselitoMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        // This adds our custom item 'attendancesheet' to our ingredients tab
+        // This adds our custom item to our INGREDIENTS creative mode tab
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ATTENDANCESHEET);
             event.accept(ModItems.KAHOOT_TOKEN);
             event.accept(ModItems.KAHOOT_GOLD_MEDAL);
             event.accept(ModItems.PROFESSORS_PEN);
+        }
+
+        // This adds our block item to our BUILDING_BLOCKS creative mode tab
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ATTENDANCE_SHEET_BLOCK);
         }
     }
 

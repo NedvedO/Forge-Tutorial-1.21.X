@@ -2,5 +2,7 @@
   "item.joselitomod.attendancesheet": "Attendance Sheet",
   "item.joselitomod.kahoot_token": "Kahoot Token",
   "item.joselitomod.kahoot_gold_medal": "Kahoot Gold Medal",
-  "item.joselitomod.professors_pen": "Professor's Pen"
+  "item.joselitomod.professors_pen": "Professor's Pen",
+
+  "block.joselitomod.attendance_sheet_block": "Block of Attendance"
 }
