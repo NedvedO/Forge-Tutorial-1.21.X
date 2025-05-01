@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "joselitomod:item/professors_pen"
+    "layer0": "joselitomod:item/attendance_sheet"
   }
 }

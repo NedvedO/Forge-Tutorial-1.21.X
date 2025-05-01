@@ -16,32 +16,37 @@ import net.nedjose.joselitomod.item.ModItems;
 import java.util.function.Supplier;
 
 public class ModBlocks {
+
+    // Register for all custom blocks in the mod
     public static final DeferredRegister<Block> BLOCKS =
                 DeferredRegister.create(ForgeRegistries.BLOCKS, JoselitoMod.MOD_ID);
+
+    //-----------------------------------------------------------------------------------------------------------------------------------
 
     // "how do we register a specific block in the game"
     // won't be able to mine block yet, and it won't drop anything yet because loot table has not been defined
     // allows us to spawn in if called in JoselitoMod class in the creative method
-    public static final RegistryObject<Block> ATTENDANCE_SHEET_BLOCK = registerBlock("attendance_sheet_block",
+    // Basic block types (custom ores, blocks)
+    public static final RegistryObject<Block> ATTENDANCE_BLOCK = registerBlock("attendance_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-    // Helper method
-    // Registers our block item that is associated with registered block
-    // Method returns registry object of type T
-    // Method takes in as parameters a String name and Supplier of type T (supplier imported from java.util.function)
+    //-----------------------------------------------------------------------------------------------------------------------------------
+
+    //    NEEDED
+    // Helper method to register both a block and its corresponding item
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    // Helper method
-    // Registers our block item in the inventory
+    // Helper method to register the block as an item (so it shows up in inventories)
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
+    // Call this method to register all blocks with the event bus
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
     }

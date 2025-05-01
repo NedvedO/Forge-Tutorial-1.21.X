@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block:cube_all",
   "textures": {
-    "all": "joselitomod:block/attendance_sheet_block"
+    "all": "joselitomod:block/attendance_block"
   }
 }

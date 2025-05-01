@@ -8,39 +8,55 @@ import net.minecraftforge.registries.RegistryObject;
 import net.nedjose.joselitomod.JoselitoMod;
 
 public class ModItems {
-    // We need to tell minecraft: "Hey these are our items, make sure that they are registered in the game"
-    // A Deferred register class allows this
-    /*
-    What is a DeferredRegister?
-        A list of objects (like items, blocks, etc.) that Minecraft processes at the correct time.
-        It's called "deferred" because it waits for a specific time to register until needed.
-     */
-    // DeferredRegister<Item> = a list/register specifically for items.
-    // ForgeRegistries.ITEMS = telling Forge "hey, we're registering items."
-    // JoselitoMod.MOD_ID = your mod's namespace, to separate your items from Minecraft’s or other mods' stuff.
+
+    //"hey these are our items, make sure they are registered"
+    // Create a DeferredRegister for registering custom items, using the mod's unique ID.
+    // This ensures items are registered at the correct time during game initialization.
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, JoselitoMod.MOD_ID);
 
+    // ---------------------------------------------------------------------------------------------------------------------------------
+
     // All the things registered will be 'public static final'
     // This adds item to game but makes it a black and purple item (bare-bones item)
-    public static final RegistryObject<Item> ATTENDANCESHEET = ITEMS.register("attendancesheet",
+    // Basic Item with no functionality (Attendance Sheet)
+    public static final RegistryObject<Item> ATTENDANCE_SHEET = ITEMS.register("attendance_sheet",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> KAHOOT_TOKEN = ITEMS.register("kahoot_token",
             () -> new Item(new Item.Properties()));
 
+    /* Staff item Professor's Pen (functionality can be added later)
+    public static final RegistryObject<Item> PROFESSORS_PEN = ITEMS.register("professor's pen",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+    // Food item (Kahoot Chocolate Gold Medal) with custom tooltip
     public static final RegistryObject<Item> KAHOOT_GOLD_MEDAL = ITEMS.register("kahoot_gold_medal",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KOHLRABI)) {
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.joselitomod.kohlrabi"));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
+    */
 
-    public static final RegistryObject<Item> PROFESSORS_PEN = ITEMS.register("professors_pen",
-            () -> new Item(new Item.Properties()));
+    // -------------------------------------------------------------------------------------------------------------------------------------
 
-    // Know we also have to register our deferred register
+    // Registers the DeferredRegister with the mod event bus so that all items are registered during mod loading.
     // This time to Forge however: "Hey Forge, this is our deferred register for our modID"
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
 }
+
+
+
+
+
+
+
+
 
 /* Steps to add a minecraft item:
     1. add these 2 lines in ModItems.java to register item to minecraft:
