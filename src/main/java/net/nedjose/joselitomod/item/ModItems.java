@@ -26,9 +26,13 @@ public class ModItems {
     public static final RegistryObject<Item> KAHOOT_TOKEN = ITEMS.register("kahoot_token",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> LETTER_A = ITEMS.register("letter_a",
+            () -> new Item(new Item.Properties()));
+
     /* Staff item Professor's Pen (functionality can be added later)
     public static final RegistryObject<Item> PROFESSORS_PEN = ITEMS.register("professor's pen",
             () -> new Item(new Item.Properties().stacksTo(1)));
+
 
     // Food item (Kahoot Chocolate Gold Medal) with custom tooltip
     public static final RegistryObject<Item> KAHOOT_GOLD_MEDAL = ITEMS.register("kahoot_gold_medal",

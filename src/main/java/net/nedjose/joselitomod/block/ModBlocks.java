@@ -28,8 +28,8 @@ public class ModBlocks {
     // allows us to spawn in if called in JoselitoMod class in the creative method
     // Basic block types (custom ores, blocks)
     public static final RegistryObject<Block> ATTENDANCE_BLOCK = registerBlock("attendance_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.of().noOcclusion()));
+                    //.strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
     //-----------------------------------------------------------------------------------------------------------------------------------
 

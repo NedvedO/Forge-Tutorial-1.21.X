@@ -14,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nedjose.joselitomod.Villager.ModVillagers;
 import net.nedjose.joselitomod.block.ModBlocks;
 import net.nedjose.joselitomod.item.ModItems;
 import org.slf4j.Logger;
@@ -56,6 +57,7 @@ public class JoselitoMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
         // Register creative tab items
         modEventBus.addListener(this::addCreative);
 
@@ -75,6 +77,7 @@ public class JoselitoMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ATTENDANCE_SHEET);
             event.accept(ModItems.KAHOOT_TOKEN);
+            event.accept(ModItems.LETTER_A);
         }
 
         // This adds our block item to our BUILDING_BLOCKS creative mode tab

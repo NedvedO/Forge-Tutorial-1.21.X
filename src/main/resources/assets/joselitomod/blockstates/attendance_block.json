@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "joselitomod:block/attendance_block"
-    }
+    "": { "model": "joselitomod:block/attendance_block" }
   }
 }

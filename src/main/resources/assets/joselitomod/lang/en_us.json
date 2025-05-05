@@ -1,6 +1,8 @@
 {
   "item.joselitomod.attendance_sheet": "Attendance Sheet",
   "item.joselitomod.kahoot_token": "Kahoot Token",
+  "item.joselitomod.letter_A": "letter A",
 
-  "block.joselitomod.attendance_block": "Block of Attendance"
+  "block.joselitomod.attendance_block": "Block of Attendance",
+  "entity.minecraft.villager.joselitomod.kaupenger": "Kaupenger"
 }
