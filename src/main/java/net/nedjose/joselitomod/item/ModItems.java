@@ -33,10 +33,10 @@ public class ModItems {
     public static final RegistryObject<Item> PROFESSORS_PEN = ITEMS.register("professor's pen",
             () -> new Item(new Item.Properties().stacksTo(1)));
 
-
+    */
     // Food item (Kahoot Chocolate Gold Medal) with custom tooltip
     public static final RegistryObject<Item> KAHOOT_GOLD_MEDAL = ITEMS.register("kahoot_gold_medal",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.KOHLRABI)) {
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KAHOOT_GOLD_MEDAL))); /*{
                 @Override
                 public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
                     pTooltipComponents.add(Component.translatable("tooltip.joselitomod.kohlrabi"));

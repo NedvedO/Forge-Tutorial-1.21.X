@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.nedjose.joselitomod.Villager.ModVillagers;
 import net.nedjose.joselitomod.block.ModBlocks;
+import net.nedjose.joselitomod.item.ModCreativeModeTabs;
 import net.nedjose.joselitomod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -54,6 +55,9 @@ public class JoselitoMod {
         // Call ModItems._____(modEventBus); inside JoselitoMod main class constructor.
         // This hooks your _____ list into Forge’s system.
         // Now Forge knows about list created in _______.java class and item is registered in mod
+
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 

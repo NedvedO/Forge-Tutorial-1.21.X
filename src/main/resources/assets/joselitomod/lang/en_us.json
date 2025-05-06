@@ -3,6 +3,14 @@
   "item.joselitomod.kahoot_token": "Kahoot Token",
   "item.joselitomod.letter_A": "letter A",
 
+  "item.joselitomod.kahoot_gold_medal": "Kahoot Gold Medal",
+
   "block.joselitomod.attendance_block": "Block of Attendance",
-  "entity.minecraft.villager.joselitomod.kaupenger": "Kaupenger"
+  "entity.minecraft.villager.joselitomod.kaupenger": "Kaupenger",
+
+  "creativetab.joselitomod.joselito_items": "Joselito Items",
+  "creativetab.joselitomod.joselito_block": "Joselito Blocks"
+
+
+
 }
