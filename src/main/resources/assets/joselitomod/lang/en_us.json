@@ -1,16 +1,20 @@
 {
   "item.joselitomod.attendance_sheet": "Attendance Sheet",
   "item.joselitomod.kahoot_token": "Kahoot Token",
-  "item.joselitomod.letter_A": "letter A",
+  "item.joselitomod.letter_a": "letter A",
 
   "item.joselitomod.kahoot_gold_medal": "Kahoot Gold Medal",
 
   "block.joselitomod.attendance_block": "Block of Attendance",
+  "block.joselitomod.java_block": "Java Block",
+
+  "item.joselitomod.kahoot_song_music_disc": "Kahoot Music Disc",
+  "item.joselitomod.kahoot_song_music_disc.desc": "Alf Inge Wang - Lobby Music",
+
+
   "entity.minecraft.villager.joselitomod.kaupenger": "Kaupenger",
 
   "creativetab.joselitomod.joselito_items": "Joselito Items",
   "creativetab.joselitomod.joselito_block": "Joselito Blocks"
-
-
 
 }

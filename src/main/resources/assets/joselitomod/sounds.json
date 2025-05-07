@@ -1,0 +1,16 @@
+{
+  "kahoot_token_use": {
+    "subtitle": "sounds.joselitomod.kahoot_token_use",
+    "sounds": [
+      "joselitomod:kahoot_token_use"
+    ]
+  },
+  "kahoot_song": {
+    "sounds": [
+      {
+        "name": "joselitomod:kahoot_song",
+        "stream": true
+      }
+    ]
+  }
+}

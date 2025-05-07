@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_attendance_sheet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "joselitomod:attendance_sheet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "joselitomod:attendance_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_attendance_sheet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "joselitomod:attendance_block"
+    ]
+  }
+}

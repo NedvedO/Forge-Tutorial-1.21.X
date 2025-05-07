@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_java_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "joselitomod:java_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "joselitomod:diamond_block__from_magic_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_java_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "joselitomod:diamond_block__from_magic_block"
+    ]
+  }
+}

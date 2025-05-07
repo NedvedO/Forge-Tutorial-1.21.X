@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nedjose.joselitomod.JoselitoMod;
+import net.nedjose.joselitomod.sound.ModSounds;
 
 public class ModItems {
 
@@ -44,6 +45,8 @@ public class ModItems {
                 }
             });
     */
+    public static final RegistryObject<Item> KAHOOT_SONG_MUSIC_DISC = ITEMS.register("kahoot_song_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.KAHOOT_SONG_KEY).stacksTo(1)));
 
     // -------------------------------------------------------------------------------------------------------------------------------------
 

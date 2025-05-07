@@ -18,6 +18,7 @@ import net.nedjose.joselitomod.Villager.ModVillagers;
 import net.nedjose.joselitomod.block.ModBlocks;
 import net.nedjose.joselitomod.item.ModCreativeModeTabs;
 import net.nedjose.joselitomod.item.ModItems;
+import net.nedjose.joselitomod.sound.ModSounds;
 import org.slf4j.Logger;
 
 
@@ -62,6 +63,10 @@ public class JoselitoMod {
         ModBlocks.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+
+        ModSounds.register(modEventBus);
+
+
         // Register creative tab items
         modEventBus.addListener(this::addCreative);
 
@@ -87,6 +92,7 @@ public class JoselitoMod {
         // This adds our block item to our BUILDING_BLOCKS creative mode tab
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ATTENDANCE_BLOCK);
+            event.accept(ModBlocks.JAVA_BLOCK);
         }
     }
 

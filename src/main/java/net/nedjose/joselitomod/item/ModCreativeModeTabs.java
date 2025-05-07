@@ -24,10 +24,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.LETTER_A.get());
 
                         output.accept(ModItems.KAHOOT_GOLD_MEDAL.get());
+                        output.accept(ModItems.KAHOOT_SONG_MUSIC_DISC.get());
 
-                    })
 
-                    .build());
+
+                    }).build());
 
     public static final RegistryObject<CreativeModeTab> JOSELITO_BLOCKS_TAB = CREATIVE_MODE_TABS.register("joselito_blocks_tab",
             () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModBlocks.ATTENDANCE_BLOCK.get()))
@@ -35,9 +36,10 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.joselitomod.joselito_block"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ATTENDANCE_BLOCK.get());
-                    })
+                        output.accept(ModBlocks.JAVA_BLOCK.get());
 
-                    .build());
+
+                    }).build());
 
 
 
