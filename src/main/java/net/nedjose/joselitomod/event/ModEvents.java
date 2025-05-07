@@ -18,7 +18,7 @@ public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event)
     {
-        if(event.getType() == ModVillagers.KAUPENGER.get())
+        if(event.getType() == ModVillagers.JOSELITO.get())
         {
             var trades = event.getTrades();
 

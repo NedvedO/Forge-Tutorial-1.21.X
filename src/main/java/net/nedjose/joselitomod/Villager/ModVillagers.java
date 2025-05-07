@@ -21,15 +21,14 @@ public class ModVillagers {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, JoselitoMod.MOD_ID);
 
-    public static final RegistryObject<PoiType> KAUPEN_POI = POI_TYPES.register("kaupen_poi",
+    public static final RegistryObject<PoiType> JOSELITO_POI = POI_TYPES.register("joselito_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.ATTENDANCE_BLOCK.get().getStateDefinition().getPossibleStates()),
                     1,1));
 
-    public static final RegistryObject<VillagerProfession> KAUPENGER = VILLAGER_PROFESSIONS.register("kaupenger",
-            () -> new VillagerProfession("kaupenger", holder -> holder.value() == KAUPEN_POI.get(),
-                    holder -> holder.value() == KAUPEN_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+    public static final RegistryObject<VillagerProfession> JOSELITO = VILLAGER_PROFESSIONS.register("joselito",
+            () -> new VillagerProfession("joselito", holder -> holder.value() == JOSELITO_POI.get(),
+                    holder -> holder.value() == JOSELITO_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.HOSTILE_HURT));
-
 
 
     public static void register(IEventBus eventBus)
