@@ -1,12 +1,17 @@
 package net.nedjose.joselitomod.item;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.nedjose.joselitomod.JoselitoMod;
 import net.nedjose.joselitomod.sound.ModSounds;
+
+import java.util.List;
 
 public class ModItems {
 
@@ -46,7 +51,16 @@ public class ModItems {
             });
     */
     public static final RegistryObject<Item> KAHOOT_SONG_MUSIC_DISC = ITEMS.register("kahoot_song_music_disc",
-            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.KAHOOT_SONG_KEY).stacksTo(1)));
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.KAHOOT_SONG_KEY).stacksTo(1)){
+                @Override
+                public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+                    pTooltipComponents.add(Component.translatable("tooltip.joselitomod.kahoot_song_music_disc"));
+                    super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+                }
+            });
+
+
+
 
     // -------------------------------------------------------------------------------------------------------------------------------------
 

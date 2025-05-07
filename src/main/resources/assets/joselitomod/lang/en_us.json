@@ -8,8 +8,9 @@
   "block.joselitomod.attendance_block": "Block of Attendance",
   "block.joselitomod.java_block": "Java Block",
 
+  "item.joselitomod.kahoot_song_music_disc.desc": "Alf Inge Wang - Lobby Music (C00)",
+  "tooltip.joselitomod.kahoot_song_music_disc": "Alf Inge Wang - Lobby Music",
   "item.joselitomod.kahoot_song_music_disc": "Kahoot Music Disc",
-  "item.joselitomod.kahoot_song_music_disc.desc": "Alf Inge Wang - Lobby Music",
 
 
   "entity.minecraft.villager.joselitomod.kaupenger": "Kaupenger",

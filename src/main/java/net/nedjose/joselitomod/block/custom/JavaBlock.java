@@ -28,8 +28,6 @@ public class JavaBlock extends Block {
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
-        //pLevel.addParticle(ModParticles.ALEXANDRITE_PARTICLES.get(), pPos.getX() + 0.5, pPos.getY() + 1, pPos.getZ() + 0.5,
-         //       0, 1, 0);
 
         pLevel.playSound(pPlayer, pPos, SoundEvents.AMETHYST_CLUSTER_PLACE, SoundSource.BLOCKS, 1f, 1f);
         return InteractionResult.SUCCESS;
