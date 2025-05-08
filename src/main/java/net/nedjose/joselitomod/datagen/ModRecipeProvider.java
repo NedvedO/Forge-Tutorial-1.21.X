@@ -32,13 +32,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ATTENDANCE_SHEET.get(), 9)
                 .requires(ModBlocks.ATTENDANCE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ATTENDANCE_BLOCK.get()), has(ModBlocks.ATTENDANCE_BLOCK.get())).save(pRecipeOutput);
+                .unlockedBy(getHasName(ModBlocks.ATTENDANCE_BLOCK.get()), has(ModBlocks.ATTENDANCE_BLOCK.get()))
+                .save(pRecipeOutput, JoselitoMod.MOD_ID + ":attendance_sheet_from_block");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.DIAMOND_BLOCK.asItem())
                 .requires(ModBlocks.JAVA_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.JAVA_BLOCK.get()), has(ModBlocks.JAVA_BLOCK.get()))
                 .save(pRecipeOutput, JoselitoMod.MOD_ID + ":diamond_block__from_magic_block");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ATTENDANCE_SHEET.get(), 9)
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', Items.PAPER)
+                .define('B', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.ATTENDANCE_SHEET.get()), has(ModItems.ATTENDANCE_SHEET.get()))
+                .save(pRecipeOutput, JoselitoMod.MOD_ID + ":attendance_sheet_from_iron_and_paper");
 
     }
 }

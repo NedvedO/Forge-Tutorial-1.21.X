@@ -1,7 +1,9 @@
-// 1.21	2025-05-07T00:50:57.1891896	Recipes
+// 1.21	2025-05-08T01:04:42.1848124	Recipes
 5433f66492c785fe306c8ae929e9f71060533481 data/joselitomod/advancement/recipes/misc/attendance_block.json
-6149d438eaa2b5ece72f63ecbeca6be8f98cbb4a data/joselitomod/advancement/recipes/misc/attendance_sheet.json
+f900bbf2a5594acd7d88ccf9294b7610112b87c6 data/joselitomod/advancement/recipes/misc/attendance_sheet_from_block.json
+61346cb4a267d78ca3048d4ff8f8829c61e1ed2a data/joselitomod/advancement/recipes/misc/attendance_sheet_from_iron_and_paper.json
 a17e920d2863d4d2375f17c8aea2e35dbb13fc7a data/joselitomod/advancement/recipes/misc/diamond_block__from_magic_block.json
 4c1528c55ed9eccb3e7673c08dd2922d56e2441d data/joselitomod/recipe/attendance_block.json
-f48222290914e80e32c60f0750bc02c40c97e556 data/joselitomod/recipe/attendance_sheet.json
+f48222290914e80e32c60f0750bc02c40c97e556 data/joselitomod/recipe/attendance_sheet_from_block.json
+e277274e35d8ea937295208cb2fc59630d8b448a data/joselitomod/recipe/attendance_sheet_from_iron_and_paper.json
 530a63c01dd3987754d93e8a35a7606010d254f3 data/joselitomod/recipe/diamond_block__from_magic_block.json

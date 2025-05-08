@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_attendance_block": {
+    "has_attendance_sheet": {
       "conditions": {
         "items": [
           {
-            "items": "joselitomod:attendance_block"
+            "items": "joselitomod:attendance_sheet"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "joselitomod:attendance_sheet"
+        "recipe": "joselitomod:attendance_sheet_from_iron_and_paper"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_attendance_block"
+      "has_attendance_sheet"
     ]
   ],
   "rewards": {
     "recipes": [
-      "joselitomod:attendance_sheet"
+      "joselitomod:attendance_sheet_from_iron_and_paper"
     ]
   }
 }
